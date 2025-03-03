@@ -1,0 +1,11 @@
+.button {
+  @apply px-[1rem] py-[0.35rem] rounded-[15px] hover:cursor-pointer text-[0.8rem] border border-solid border-[black];
+}
+
+.button_light {
+  @apply text-[black] bg-[transparent];
+}
+
+.button_dark {
+  @apply text-[white] bg-[black];
+}
