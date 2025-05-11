@@ -1,19 +1,37 @@
-import Link from "next/link";
-import Image from "next/image";
+import Subtitle from "./subtitle";
+import ContactDetails from "./contact-details";
 
-export default function ContactMe({ href, src, alt, resource }) {
+export default function ContactMe() {
   return (
-    <div className="flex flex-col md:flex-row items-center gap-[1rem] mt-[3rem] md:ms-[1rem]">
-      <Link
-        className="border-[solid] border-[black] border-[1px] rounded-[50%] p-[0.3rem]"
-        href={href}
-        target="_blank"
-      >
-        <Image src={src} alt={alt} width={50} height={50} priority></Image>
-      </Link>
-      <Link className="text-[16px] md:text-[24px]" href={href} target="_blank">
-        {resource}
-      </Link>
-    </div>
+    <section
+      id="contact-me"
+      className="mx-[2.6rem] mb-[7rem] md:mx-[5rem] xl:mx-[20%]"
+    >
+      <Subtitle subtitle="Contact Me"></Subtitle>
+      <ContactDetails
+        href="tel:+972538234329"
+        src="/phone.svg"
+        alt="call me"
+        resource="+972-53-823-4329"
+      ></ContactDetails>
+      <ContactDetails
+        href="https://wa.me/972538234329"
+        src="/whatsapp.svg"
+        alt="message me"
+        resource="+972-53-823-4329"
+      ></ContactDetails>
+      <ContactDetails
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=rephael4321@gmail.com&su=&body="
+        src="/email.svg"
+        alt="email me"
+        resource="rephael4321@gmail.com"
+      ></ContactDetails>
+      <ContactDetails
+        href="https://linkedin.com/in/rephael-sintes-833177196"
+        src="/linked-in.svg"
+        alt="linkedin profile"
+        resource="LinkedIn"
+      ></ContactDetails>
+    </section>
   );
 }

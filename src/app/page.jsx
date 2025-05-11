@@ -33,7 +33,11 @@ export default function Home() {
             DEVELOPER
           </h1>
           <div className="flex justify-around">
-            <Button text="View My Work" href="/projects" theme="dark"></Button>
+            <Button
+              text="View My Work"
+              href="/projects/neura-query"
+              theme="dark"
+            ></Button>
             <Button text="Contact Me" href="#contact-me" theme="light"></Button>
           </div>
         </div>
@@ -104,36 +108,20 @@ export default function Home() {
         <FunFact number="1" text="Project"></FunFact>
         <FunFact number="180L" text="Coffee"></FunFact>
       </section>
-      <section
-        id="contact-me"
-        className="mx-[2.6rem] mb-[7rem] md:mx-[5rem] xl:mx-[20%]"
-      >
-        <Subtitle subtitle="Contact Me"></Subtitle>
-        <ContactMe
-          href="tel:+972538234329"
-          src="/phone.svg"
-          alt="call me"
-          resource="+972-53-823-4329"
-        ></ContactMe>
-        <ContactMe
-          href="https://wa.me/972538234329"
-          src="/whatsapp.svg"
-          alt="message me"
-          resource="+972-53-823-4329"
-        ></ContactMe>
-        <ContactMe
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=rephael4321@gmail.com&su=&body="
-          src="/email.svg"
-          alt="email me"
-          resource="rephael4321@gmail.com"
-        ></ContactMe>
-        <ContactMe
-          href="https://linkedin.com/in/rephael-sintes-833177196"
-          src="/linked-in.svg"
-          alt="linkedin profile"
-          resource="LinkedIn"
-        ></ContactMe>
+      <section className="text-center mb-[7rem]">
+        <h3 className="text-[2rem] md:text-[2.5rem]">
+          Want to see what I can do?
+        </h3>
+        <p className="text-[16px] md:text-[24px] mb-[16px]">
+          ↓ View my project ↓
+        </p>
+        <Button
+          text="View My Work"
+          href="/projects/neura-query"
+          theme="dark"
+        ></Button>
       </section>
+      <ContactMe />
       <div className="w-[100%] h-[5px] bg-[black]"></div>
     </>
   );
