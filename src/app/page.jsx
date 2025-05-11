@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <nav className="w-[100%] h-[10vh] bg-[#0000003b] fixed backdrop-blur-[4px] flex items-center">
-        <Link href="#nav-spacer">
+        <Link href="/">
           <Image
             className="ms-[2rem] md:ms-[5rem] xl:ms-[10rem] hover:cursor-pointer"
             src="/R.svg"
@@ -33,7 +33,7 @@ export default function Home() {
             DEVELOPER
           </h1>
           <div className="flex justify-around">
-            {/* <Button text="View My Work" href="/" theme="dark"></Button> */}
+            <Button text="View My Work" href="/projects" theme="dark"></Button>
             <Button text="Contact Me" href="#contact-me" theme="light"></Button>
           </div>
         </div>
@@ -42,7 +42,7 @@ export default function Home() {
           style={{
             borderRadius: "50%",
           }}
-          src="/selfie.webp"
+          src="/selfie.png"
           alt="personal image"
           width={250}
           height={250}
@@ -72,6 +72,7 @@ export default function Home() {
           <CustomParagraph text="Backend Development"></CustomParagraph>
           <CustomParagraph text="Frontend Development"></CustomParagraph>
           <CustomParagraph text="Version Control"></CustomParagraph>
+          <CustomParagraph text="Automation"></CustomParagraph>
         </div>
       </section>
       <section className="mx-[2.6rem] mb-[7rem] md:mx-[5rem] xl:mx-[20%]">
@@ -89,15 +90,24 @@ export default function Home() {
           <p>GIT</p>
           <p>Linux</p>
           <p>AWS</p>
+          <p>Kafka</p>
+          <p>Docker</p>
+          <p>FastAPI</p>
+          <p>Kubernetes</p>
+          <p>Swagger</p>
         </div>
       </section>
       <section className="mx-[2.6rem] mb-[7rem] md:mx-[5rem] xl:mx-[20%]">
         <Subtitle subtitle="Fun Facts"></Subtitle>
-        <FunFact number="2000+" text="Hours of Practice"></FunFact>
-        <FunFact number="3" text="Projects"></FunFact>
+        <FunFact number="2,000+" text="Hours of Practice"></FunFact>
+        <FunFact number="88,000+" text="Lines of Code"></FunFact>
+        <FunFact number="1" text="Project"></FunFact>
         <FunFact number="180L" text="Coffee"></FunFact>
       </section>
-      <section id="contact-me" className="mx-[2.6rem] mb-[7rem] md:mx-[5rem] xl:mx-[20%]">
+      <section
+        id="contact-me"
+        className="mx-[2.6rem] mb-[7rem] md:mx-[5rem] xl:mx-[20%]"
+      >
         <Subtitle subtitle="Contact Me"></Subtitle>
         <ContactMe
           href="tel:+972538234329"
