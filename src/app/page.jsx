@@ -1,128 +1,161 @@
-import Button from "@/ui/button";
-import Subtitle from "@/ui/subtitle";
-import FunFact from "@/ui/fun-fact";
-import ContactMe from "@/ui/contact-me";
-import CustomParagraph from "@/ui/custom-paragraph";
+import TechnologiesCarousel from "@/components/technologies-carousel";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <nav className="w-[100%] h-[10vh] bg-[#0000003b] fixed backdrop-blur-[4px] flex items-center">
-        <Link href="/">
-          <Image
-            className="ms-[2rem] md:ms-[5rem] xl:ms-[10rem] hover:cursor-pointer"
-            src="/R.svg"
-            alt="home logo"
-            width={50}
-            height={50}
-            priority
-          ></Image>
-        </Link>
-      </nav>
-      <div id="nav-spacer" className="w-[100%] h-[10vh]"></div>
       <section
         id="hero-section"
-        className="flex flex-col md:flex-row md:px-[7%] xl:px-[25%] justify-between items-center md:h-[80vh] md:mb-[10vh]
-      "
+        className="flex flex-col md:flex-row px-[2.6rem] md:px-[7%] xl:px-[15%] justify-between items-center md:h-[80vh] md:mb-[10vh]"
       >
-        <div className="mt-[2rem] md:mt-[0]">
-          <h2 className="text-[1.7rem] md:text-[2rem]">HI I'M A SOFTWARE</h2>
-          <h1 className="text-[2rem] md:text-[3rem] font-semibold pb-[2.4rem] tracking-[5px]">
-            DEVELOPER
+        <div className="mt-[2rem] md:mt-0 text-center md:text-left">
+          <h1 className="text-[2rem] md:text-[3rem] font-semibold pb-[2.4rem] font-display md:w-[70%] mx-auto md:mx-0">
+            HI I'M A SOFTWARE DEVELOPER
           </h1>
-          <div className="flex justify-around">
-            <Button
-              text="View My Work"
-              href="/projects/neura-query"
-              theme="dark"
-            ></Button>
-            <Button text="Contact Me" href="#contact-me" theme="light"></Button>
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-12 justify-center md:justify-start">
+            <Link href="#contact-me">
+              <button className="px-10 py-4 rounded-[8px] text-black bg-white font-text transition-colors ease-in-out duration-500 hover:bg-[#1A6AFF]">
+                Contact Me
+              </button>
+            </Link>
+            <Link href="/projects/neura-query">
+              <button className="px-10 py-4 rounded-[8px] text-black bg-[#32e6e2] font-text transition-colors duration-500 ease-in-out hover:bg-[#1A6AFF]">
+                View my work
+              </button>
+            </Link>
           </div>
         </div>
+
         <Image
-          className="my-[4rem] md:my-[0]"
-          style={{
-            borderRadius: "50%",
-          }}
+          className="my-[4rem] md:my-0"
+          style={{ borderRadius: "50%" }}
           src="/selfie.png"
           alt="personal image"
-          width={250}
-          height={250}
+          width={300}
+          height={300}
           priority
-        ></Image>
+        />
       </section>
-      <section className="mx-[2.6rem] mb-[7rem] md:mx-[5rem] xl:mx-[20%]">
-        <Subtitle subtitle="About Me"></Subtitle>
-        <p className="text-[1.5rem] my-[1rem]">I'm Rephael Sintes</p>
-        <p className="text-[1.2rem]">
-          I'm a software developer with a passion for building efficient and
-          scalable solutions. I enjoy writing clean, optimized code and
-          developing high-performance applications that provide real value. With
-          a strong focus on problem-solving and architecture, I strive to create
-          software that is both powerful and user-friendly. My goal is to
-          deliver top-quality work on time and within budget, ensuring the best
-          results for every project.
-        </p>
-      </section>
-      <section className="mx-[2.6rem] mb-[7rem] md:mx-[5rem] xl:mx-[20%]">
-        <Subtitle subtitle="What I Do"></Subtitle>
-        <div className="grid md:grid-cols-[1fr_1fr] border-[solid] border-[black] border-[1px] mt-[2rem] ps-[1rem] md:px-[3rem] xl:px-[7rem] pt-[2rem] pb-[1rem]">
-          <CustomParagraph text="APIs"></CustomParagraph>
-          <CustomParagraph text="CLIs"></CustomParagraph>
-          <CustomParagraph text="SQL & NoSQL"></CustomParagraph>
-          <CustomParagraph text="Software Architecture"></CustomParagraph>
-          <CustomParagraph text="Backend Development"></CustomParagraph>
-          <CustomParagraph text="Frontend Development"></CustomParagraph>
-          <CustomParagraph text="Version Control"></CustomParagraph>
-          <CustomParagraph text="Automation"></CustomParagraph>
+
+      {/* About Me */}
+      <section className="px-[2.6rem] md:px-[7%] xl:px-[15%] mb-[7rem]">
+        <h2 className="text-[2.5rem] md:text-[2.75rem] font-bold text-[#32e6e2] font-display mb-[2rem]">
+          About Me
+        </h2>
+        <div className="flex flex-col md:flex-row w-full md:w-[85%] xl:w-[70%]">
+          <div className="w-[1px] bg-[#f0f0f0] mb-6 md:mb-0 md:me-[3rem]" />
+          <div className="flex flex-col gap-[1rem]">
+            <h3 className="text-[1.1rem] font-text font-semibold">
+              I'm Rephael Sintes
+            </h3>
+            <p className="text-[1.1rem] text-[#f0f0f0] font-text leading-relaxed">
+              I'm a software developer with a passion for building efficient and
+              scalable solutions...
+            </p>
+          </div>
         </div>
       </section>
-      <section className="mx-[2.6rem] mb-[7rem] md:mx-[5rem] xl:mx-[20%]">
-        <Subtitle subtitle="Skills"></Subtitle>
-        <div className="grid grid-cols-[1fr_1fr_1fr] gap-y-[20px] mt-[2rem] md:px-[7rem] pt-[2rem] pb-[1rem]">
-          <p>HTML</p>
-          <p>CSS</p>
-          <p>JavaScript</p>
-          <p>React</p>
-          <p>NextJS</p>
-          <p>Tailwind</p>
-          <p>Python</p>
-          <p>SQL</p>
-          <p>NoSQL</p>
-          <p>GIT</p>
-          <p>Linux</p>
-          <p>AWS</p>
-          <p>Kafka</p>
-          <p>Docker</p>
-          <p>FastAPI</p>
-          <p>Kubernetes</p>
-          <p>Swagger</p>
+
+      {/* What I Do */}
+      <section className="px-[2.6rem] md:px-[7%] xl:px-[15%] mb-[7rem]">
+        <h2 className="text-[2.5rem] md:text-[2.75rem] font-bold text-[#32e6e2] font-display mb-[2rem]">
+          What I Do
+        </h2>
+        <div className="flex flex-col md:flex-row w-full md:w-[85%] xl:w-[70%]">
+          <div className="w-[1px] bg-[#f0f0f0] mb-6 md:mb-0 md:me-[3rem]" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-[2rem] gap-y-[0.6rem] mt-[0.5rem] font-text text-[1.1rem] text-[#f0f0f0]">
+            <p>&gt; APIs</p>
+            <p>&gt; CLIs</p>
+            <p>&gt; SQL &amp; NoSQL</p>
+            <p>&gt; Software Architecture</p>
+            <p>&gt; Backend Development</p>
+            <p>&gt; Frontend Development</p>
+            <p>&gt; Version Control</p>
+            <p>&gt; Automation</p>
+          </div>
         </div>
       </section>
-      <section className="mx-[2.6rem] mb-[7rem] md:mx-[5rem] xl:mx-[20%]">
-        <Subtitle subtitle="Fun Facts"></Subtitle>
-        <FunFact number="2,000+" text="Hours of Practice"></FunFact>
-        <FunFact number="88,000+" text="Lines of Code"></FunFact>
-        <FunFact number="1" text="Project"></FunFact>
-        <FunFact number="180L" text="Coffee"></FunFact>
+
+      {/* Skills */}
+      <section className="px-[2.6rem] md:px-[7%] xl:px-[15%] mb-[7rem]">
+        <h2 className="text-[2.5rem] md:text-[2.75rem] font-bold text-[#32e6e2] font-display mb-[2rem]">
+          Skills
+        </h2>
+        <div className="flex flex-col md:flex-row w-full md:w-[85%] xl:w-[70%]">
+          <div className="w-[1px] bg-[#f0f0f0] mb-6 md:mb-0 md:me-[3rem]" />
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-[2rem] gap-y-[0.6rem] font-text text-[1.1rem] text-[#f0f0f0]">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+            <p>React</p>
+            <p>NextJS</p>
+            <p>Tailwind</p>
+            <p>Python</p>
+            <p>SQL</p>
+            <p>NoSQL</p>
+            <p>GIT</p>
+            <p>Linux</p>
+            <p>AWS</p>
+            <p>Kafka</p>
+            <p>Docker</p>
+            <p>FastAPI</p>
+            <p>Kubernetes</p>
+            <p>Swagger</p>
+          </div>
+        </div>
       </section>
-      <section className="text-center mb-[7rem]">
-        <h3 className="text-[2rem] md:text-[2.5rem]">
-          Want to see what I can do?
-        </h3>
-        <p className="text-[16px] md:text-[24px] mb-[16px]">
-          ↓ View my project ↓
-        </p>
-        <Button
-          text="View My Work"
-          href="/projects/neura-query"
-          theme="dark"
-        ></Button>
+
+      {/* View Project */}
+      <section className="px-[2.6rem] md:px-[7%] xl:px-[15%] mb-[7rem]">
+        <h2 className="text-[2.5rem] md:text-[2.75rem] font-bold text-[#32e6e2] font-display mb-[2rem]">
+          View my project
+        </h2>
+        <div className="flex flex-col md:flex-row w-full md:w-[85%] xl:w-[70%]">
+          <div className="w-[1px] bg-[#f0f0f0] mb-6 md:mb-0 md:me-[3rem]" />
+          <div className="flex flex-col gap-[1rem]">
+            <p className="text-[1.1rem] font-text leading-relaxed">
+              AI-powered platform for effortless access and interaction with SQL
+              databases
+            </p>
+            <Link href="/projects/neura-query">
+              <button className="px-10 py-4 rounded-[8px] text-black bg-[#32e6e2] font-text transition-colors duration-500 ease-in-out hover:bg-[#1A6AFF]">
+                View my work
+              </button>
+            </Link>
+          </div>
+        </div>
       </section>
-      <ContactMe />
-      <div className="w-[100%] h-[5px] bg-[black]"></div>
+
+      {/* Fun Facts */}
+      <section className="px-[2.6rem] md:px-[7%] xl:px-[15%] mb-[7rem]">
+        <h2 className="text-[2.5rem] md:text-[2.75rem] font-bold text-[#32e6e2] font-display mb-[2rem]">
+          Fun Facts
+        </h2>
+        <div className="flex flex-col md:flex-row w-full md:w-[85%] xl:w-[70%] text-[#f0f0f0]">
+          <div className="w-[1px] bg-[#f0f0f0] mb-6 md:mb-0 md:me-[3rem]" />
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-6 gap-x-8">
+            <div className="flex flex-col gap-y-2">
+              <span className="text-[1.5rem] font-bold">2,000+</span>
+              <span>Hours of Practice</span>
+            </div>
+            <div className="flex flex-col gap-y-2">
+              <span className="text-[1.5rem] font-bold">88,000+</span>
+              <span>Lines of Code</span>
+            </div>
+            <div className="flex flex-col gap-y-2">
+              <span className="text-[1.5rem] font-bold">1</span>
+              <span>Project</span>
+            </div>
+            <div className="flex flex-col gap-y-2">
+              <span className="text-[1.5rem] font-bold">1800L</span>
+              <span>Coffee</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <TechnologiesCarousel />
     </>
   );
 }
