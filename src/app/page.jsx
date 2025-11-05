@@ -1,4 +1,5 @@
 import TechnologiesCarousel from "@/components/technologies-carousel";
+import RotatingText from "@/components/rotating-text";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,8 +11,13 @@ export default function Home() {
         className="flex flex-col md:flex-row px-[2.6rem] md:px-[7%] xl:px-[15%] justify-between items-center md:h-[80vh] md:mb-[10vh]"
       >
         <div className="mt-[2rem] md:mt-0 text-center md:text-left">
-          <h1 className="text-[2rem] md:text-[3rem] font-semibold pb-[2.4rem] font-display md:w-[70%] mx-auto md:mx-0">
-            MY NAME IS REPHAEL SINTES AND I'M A SOFTWARE DEVELOPER
+          <h1
+            className="text-[2rem] md:text-[3rem] font-semibold pb-[2.4rem] md:w-[70%] mx-auto md:mx-0"
+            style={{
+              fontFamily: "var(--font-orbitron), sans-serif",
+            }}
+          >
+            Hi, I'm <br /> <RotatingText />
           </h1>
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-12 justify-center md:justify-start">
             <Link href="#contact-me">

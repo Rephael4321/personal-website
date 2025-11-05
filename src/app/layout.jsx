@@ -1,7 +1,15 @@
 import "@/ui/globals.css";
 import localFont from "next/font/local";
+import { Orbitron } from "next/font/google";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+
+// Orbitron font from Google Fonts
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-orbitron",
+});
 
 // Madefor for body text
 const madeforText = localFont({
@@ -26,7 +34,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${madeforText.variable} ${madeforDisplay.variable}`}
+      className={`${orbitron.variable} ${madeforText.variable} ${madeforDisplay.variable}`}
     >
       <body className="font-body antialiased">
         <Navbar />
