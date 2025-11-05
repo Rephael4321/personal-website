@@ -6,7 +6,7 @@ export default function RotatingText() {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
-  const texts = ["Rephael Sintes", "Software Developer"];
+  const texts = ["Rephael Sintes", "A Software Developer"];
   const timeoutRef = useRef(null);
 
   useEffect(() => {
