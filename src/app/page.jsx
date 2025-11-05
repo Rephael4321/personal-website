@@ -59,7 +59,7 @@ export default function Home() {
               web development course at 26 that deepened my understanding of
               modern application design. At 28, I graduated from a software
               development and cloud technologies program, completing a
-              comprehensive final project that tied everything together—from
+              comprehensive final project that tied everything together - from
               backend systems to cloud deployment. Soon after, I built a full
               online store for a client, turning ideas into a working product.
               I’m now looking to join a dynamic and growing environment that
