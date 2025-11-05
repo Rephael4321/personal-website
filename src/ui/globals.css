@@ -9,6 +9,10 @@
   --foreground: #f0f0f0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Base text font */
 body {
   font-family: var(--font-body), sans-serif;
