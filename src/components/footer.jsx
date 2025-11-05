@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <footer>
       {/* Contact Opportunity Section with Dark Background */}
-      <section className="px-[2.6rem] md:px-[7%] xl:px-[15%] py-[7rem] text-center">
+      <section id="contact-me" className="px-[2.6rem] md:px-[7%] xl:px-[15%] py-[7rem] text-center">
         <h2 className="text-[2rem] md:text-[2.5rem] xl:text-[3rem] font-bold text-[#32e6e2] font-display mb-[2rem] tracking-wide">
           <div>Have a great opportunity for me?</div>
           <div className="text-white">Feel free to contact me</div>
